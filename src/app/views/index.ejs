@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="http://localhost:3000/files/css/bootstrap.css">
+    <link rel="stylesheet" href="http://localhost:3000/files/css/index.css" />
+    <title>Calendário FAP</title>
+</head>
+<body>
+
+    <div id="main" class="border-0 border-primary rounded">
+        <div id="logo">
+            <img src="http://localhost:3000/files/img/logo.png"/>
+        </div>
+
+        <form method="POST" name="eventForm" action="/" >
+            <div class="form-group">
+                <label for="title">Título do Evento:</label>
+                <input class="form-control" type="text" name="title" id="title" autocomplete="off"/>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Local:</label>
+                <input class="form-control" type="text" name="location" id="location" autocomplete="off"/>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Descrição do Evento:</label>
+                <input class="form-control" type="text" name="description" id="description" autocomplete="off"/>
+            </div>
+            
+            <div class="form-group" id="start">
+                <label for="start">Início do Evento</label>
+                <input class="form-control" type="time" name="startTime" id="startTime">
+                <input class="form-control" type="date" name="startDate" min="2019-01-01" max="2019-12-31" id="startDate">
+            </div>
+            
+            <div class="form-group" id="finish">
+                <label for="finish">Fim do Evento</label>
+                <input class="form-control" type="time" name="finishTime" id="finishTime">
+                <input class="form-control" type="date" name="finishDate" min="2019-01-01" max="2019-12-31" id="finishDate">
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="email-input" placeholder="Adicionar Alunos" aria-label="Recipient's username" aria-describedby="btn-add">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-primary" type="button" id="btn-add">Adicionar</button>
+                </div>
+            </div>
+
+            <div id="email-students" class="mb-2">
+            </div>
+            
+            <input type="hidden" name="students">
+            
+            <div class="text-center">
+                <button class="btn btn-success" type="submit" id="btn-submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="http://localhost:3000/files/js/axios.js"></script>
+    <script src="http://localhost:3000/files/js/jquery.js" ></script>
+    <script src="http://localhost:3000/files/js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://localhost:3000/files/js/index.js"></script>
+</body>
+</html>
